@@ -303,7 +303,7 @@ public class VMIInformerExample {
                 apiClient.getHttpClient().newBuilder().readTimeout(0, TimeUnit.SECONDS).build();
         apiClient.setHttpClient(httpClient);
 
-        SharedInformerFactory factory = new SharedInformerFactory();
+        SharedInformerFactory factory = new SharedInformerFactory(apiClient);
 
 //        SharedIndexInformer<V1Pod> podInformer = createPodInformer("nd-sjc6w-01", factory, coreV1Api);
 //        SharedIndexInformer<V1Node> nodeInformer = createNodeInformer(factory, coreV1Api);
